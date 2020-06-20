@@ -1,4 +1,4 @@
-FROM multiarch/crossbuild
+FROM eds000n/crossbuild
 
 ENV PATH $PATH:/usr/local/go/bin
 
@@ -13,4 +13,5 @@ RUN set -ex \
     && rm goreleaser.tar.gz \
     && curl -LO https://dl.google.com/go/go${GOVER}.linux-amd64.tar.gz \
     && tar -C /usr/local -xzf go${GOVER}.linux-amd64.tar.gz \
-    && rm go${GOVER}.linux-amd64.tar.gz
+    && rm go${GOVER}.linux-amd64.tar.gz \
+    && curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh

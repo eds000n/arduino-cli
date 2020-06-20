@@ -14,4 +14,6 @@ RUN set -ex \
     && curl -LO https://dl.google.com/go/go${GOVER}.linux-amd64.tar.gz \
     && tar -C /usr/local -xzf go${GOVER}.linux-amd64.tar.gz \
     && rm go${GOVER}.linux-amd64.tar.gz \
+    && cd /usr/local \
     && curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
+

@@ -17,3 +17,6 @@ RUN set -ex \
     && cd /usr/local \
     && curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
 
+RUN wget https://bootstrap.pypa.io/get-pip.py \
+    && python get-pip.py \
+    && pip install pyserial
